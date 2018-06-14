@@ -15,10 +15,12 @@ router.get('/history', (req, res) => {
 
 router.post('/meatMath', (req, res) => {
   const data = {
+    user: req.body.id,
+    date: req.body.date,
     meat: req.body.meat,
     amount: Number(req.body.amount)
   }
-  const test = fn.calcData(data.amount)
+  const test = fn.calcData(data)
   console.log(test)
   //db.insertEntry(data)
     //.then(results => {
