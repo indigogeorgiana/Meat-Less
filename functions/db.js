@@ -37,6 +37,6 @@ function historyTotal (data, testConn) {
       'user_id': data.user_id,
       'meat_id': data.meat_id
     })
-    .sum('amount')
+    .sum('amount as result')
     .first()
 }

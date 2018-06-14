@@ -55,7 +55,7 @@ test('historTotal calculates the total savings of an user', () => {
   }
   return db.historyTotal(data, testDb)
     .then(total => {
-      const actual = Number(Object.values(total))
+      const actual = total.result
       expect(actual).toBe(expected)
     })
     .catch(err => expect(err).toBeNull())
