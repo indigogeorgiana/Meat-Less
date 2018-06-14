@@ -1,11 +1,7 @@
 const express = require('express')
 
-
-const db = require('../db')
-
 const db = require('../functions/db')
 const fn = require('../functions/math')
-
 
 const router = express.Router()
 
@@ -17,7 +13,6 @@ router.get('/history', (req, res) => {
   res.render('partials/history')
 })
 
-
 router.post('/home', (req, res) => {
   db.getUsers()
     .then(results => {
@@ -26,23 +21,24 @@ router.post('/home', (req, res) => {
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
+})
 
 router.post('/meatMath', (req, res) => {
   const data = {
-    user: req.body.id,
+    user_id: req.body.user,
     date: req.body.date,
-    meat: req.body.meat,
+    meat_id: req.body.meat,
     amount: Number(req.body.amount)
   }
   const test = fn.calcData(data)
   console.log(test)
-  //db.insertEntry(data)
-    //.then(results => {
-      res.render('layouts/index')
-    // })
-    // .catch(err => {
-    //   res.status(500).send('DATABASE ERROR: ' + err.message)
-    // })
+  // db.insertEntry(data)
+  // .then(results => {
+  res.render('layouts/index')
+  // })
+  // .catch(err => {
+  //   res.status(500).send('DATABASE ERROR: ' + err.message)
+  // })
 })
 
 // router.get('/', (req, res) => {
