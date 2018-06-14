@@ -8,6 +8,7 @@
 html, body {
   width: 100%;
   font-family: 'Quicksand', sans-serif;
+  text-align: center;
 }
 
 a {
@@ -22,6 +23,30 @@ header {
 
 h1 {
   font-size: 4rem;
+}
+
+.maths {
+  background-color: green;
+  color: black;
+}
+
+.users {
+  width: 80%;
+  padding: 12px 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.meat-form {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 
