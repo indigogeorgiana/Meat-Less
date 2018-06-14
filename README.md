@@ -1,24 +1,16 @@
-# Boilerplate: Knex.js
+MVP
 
-Phase 1 boilerplate project with:
-
- - Express
- - Knex
- - SQLite3
- - Express Handlebars
- - body-parser
- - Jest
- - nodemon
+Create page templates
+Create Routes
+Build database
+R/D formulas for results
+Boilerplate
+CSS
 
 
-## Install
-
-```
-yarn
-yarn knex migrate:latest
-yarn knex seed:run
-yarn dev
-```
-
-Be sure to check out the other npm scripts too.
-
+User story
+As a user I want...
+  to select my name in the drop down and enter meat details
+  to select meat type and enter amout in grams 
+  to view savings per meal
+  to see history of savings
