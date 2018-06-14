@@ -1,1 +1,39 @@
-/* test */
+
+
+* {
+  box-sizing: border-box;
+  border: 0.5px solid transparent;
+}
+
+html, body {
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+a {
+	color: black;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+}
+
+
+footer {
+  width: 100%;
+  background: black;
+  color: white;
+}
+
+h5 {
+  font-size: 3rem;
+}
+
+/* Index page */
+
+
+
+/* User page */
+
+
