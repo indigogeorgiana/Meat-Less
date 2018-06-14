@@ -5,7 +5,8 @@ const connection = require('knex')(config)
 module.exports = {
   getUser: getUser,
   getUsers: getUsers,
-  insertEntry: insertEntry
+  insertEntry: insertEntry,
+  historyTotal: historyTotal
 }
 
 function getUsers (testConn) {
@@ -29,10 +30,10 @@ function insertEntry (data, testConn) {
     })
 }
 
-function historyTotal (id, testConn) {
+function historyTotal (userId, testConn) {
   const conn = testConn || connection
   return conn('entries')
-    .select('amount')
-    .where('id', id)
-    
+    .where('user_id', userId)
+    .sum('amount')
+    .first()
 }
