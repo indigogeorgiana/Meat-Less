@@ -1,7 +1,7 @@
 const request = require('supertest')
 const cheerio = require('cheerio')
 
-jest.mock('../db', () => ({
+jest.mock('../functions/db', () => ({
   getUser: (id) => Promise.resolve(
     {id: id, name: 'test user', email: 'test@user.nz'}
   ),
