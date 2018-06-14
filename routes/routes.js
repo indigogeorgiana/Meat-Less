@@ -6,11 +6,11 @@ const fn = require('../functions/math')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  res.render('layouts/index')
+  res.render('./layouts/index')
 })
 
 router.get('/history', (req, res) => {
-  res.render('partials/history')
+  res.render('./partials/history')
 })
 
 router.post('/meatMath', (req, res) => {
@@ -24,7 +24,7 @@ router.post('/meatMath', (req, res) => {
   console.log(test)
   //db.insertEntry(data)
     //.then(results => {
-      res.render('layouts/index')
+      res.render('./layouts/index')
     // })
     // .catch(err => {
     //   res.status(500).send('DATABASE ERROR: ' + err.message)
