@@ -46,3 +46,8 @@ test('insertEntry inserts a new entry', () => {
     })
     .catch(err => expect(err).toBeNull())
 })
+
+test('historTotal calculates the total savings of an user', () => {
+  const expected = 
+  
+})
