@@ -1,7 +1,11 @@
 const express = require('express')
 
+
+const db = require('../db')
+
 const db = require('../functions/db')
 const fn = require('../functions/math')
+
 
 const router = express.Router()
 
@@ -12,6 +16,16 @@ router.get('/', (req, res) => {
 router.get('/history', (req, res) => {
   res.render('partials/history')
 })
+
+
+router.post('/home', (req, res) => {
+  db.getUsers()
+    .then(results => {
+      res.render('partial/home', results)
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
 
 router.post('/meatMath', (req, res) => {
   const data = {
