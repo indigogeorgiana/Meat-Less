@@ -48,6 +48,15 @@ test('insertEntry inserts a new entry', () => {
 })
 
 test('historTotal calculates the total savings of an user', () => {
-  const expected = 
-  
+  const expected = 500
+  const data = {
+    user_id: 1,
+    meat_id: 2
+  }
+  return db.historyTotal(data, testDb)
+    .then(total => {
+      const actual = Number(Object.values(total))
+      expect(actual).toBe(expected)
+    })
+    .catch(err => expect(err).toBeNull())
 })
