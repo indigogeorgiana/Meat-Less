@@ -1,13 +1,15 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid transparent;
+  border: 0.5px solid red;
 }
 
 html, body {
-  width: 100%;
+  max-width: 100%;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
 }
+
+
 
 a {
 	color: black;
@@ -15,22 +17,36 @@ a {
 }
 
 header {
-  width: 100%;
+  max-width: 100%;
   background: white;
-  margin: 2rem;
+  padding: 2rem;
 }
 
-h1 {
-  font-size: 4rem;
+header img {
+  max-width: 100%;
 }
 
 .maths {
   background-color: green;
   color: black;
+  font-size: 1rem;
 }
 
-.users {
+
+form {
   width: 80%;
+  font-size: 1rem;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+.user {
+  width: 100%;
+  font-size: 1rem;
   padding: 12px 12px;
   margin: 8px 0;
   border: 1px solid #ccc;
@@ -38,14 +54,14 @@ h1 {
   box-sizing: border-box;
 }
 
-.meat-form {
-  width: 80%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+.maths img {
+  width: 40%;
+  margin: 1rem;
+  transition         : transform 2s;
+}
+
+.maths img:hover {
+  transform: rotate(1080deg) !important;
 }
 
 
