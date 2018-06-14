@@ -28,3 +28,11 @@ function insertEntry (data, testConn) {
       date: data.date
     })
 }
+
+function historyTotal (id, testConn) {
+  const conn = testConn || connection
+  return conn('entries')
+    .select('amount')
+    .where('id', id)
+    
+}
