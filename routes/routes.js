@@ -15,9 +15,9 @@ router.get('/history', (req, res) => {
 
 router.post('/meatMath', (req, res) => {
   const data = {
-    user: req.body.id,
+    user_id: req.body.user,
     date: req.body.date,
-    meat: req.body.meat,
+    meat_id: req.body.meat,
     amount: Number(req.body.amount)
   }
   const test = fn.calcData(data)
