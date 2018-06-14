@@ -17,6 +17,11 @@ a {
 
 header {
   width: 100%;
+  background: white;
+}
+
+h1 {
+  font-size: 4rem;
 }
 
 
