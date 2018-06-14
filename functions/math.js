@@ -3,5 +3,5 @@ module.exports = {
 }
 
 function calcData (data) {
-  return data.amount * 10
+  return data * 10
 }
