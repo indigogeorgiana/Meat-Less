@@ -30,10 +30,13 @@ function insertEntry (data, testConn) {
     })
 }
 
-function historyTotal (userId, testConn) {
+function historyTotal (data, testConn) {
   const conn = testConn || connection
   return conn('entries')
-    .where('user_id', userId)
+    .where({
+      'user_id': data.user_id,
+      'meat_id': data.meat_id
+    })
     .sum('amount')
     .first()
 }
