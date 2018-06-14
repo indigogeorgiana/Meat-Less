@@ -5,17 +5,22 @@ const db = require('../functions/db')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  res.render('partials/index')
+  res.render('layouts/index')
 })
 
 router.get('/history', (req, res) => {
   res.render('partials/history')
 })
 
-router.post('/home', (req, res) => {
-  db.getUsers()
+router.post('/meatMath', (req, res) => {
+  const data = {
+    meat: req.body.meat,
+    amount: req.body.amount
+  }
+  calcData(data)
+  db.insertEntry(data)
     .then(results => {
-      res.render('partial/home', results)
+      res.render('partials/home', results)
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
