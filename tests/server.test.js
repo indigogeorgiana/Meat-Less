@@ -13,14 +13,14 @@ jest.mock('../functions/db', () => ({
 
 const server = require('../server')
 
-test('GET /', () => {
-  return request(server)
+test('GET /', done => {
+  request(server)
     .get('/')
     .expect(200)
-    .then((res) => {
+    .end((err, res) => {
       const $ = cheerio.load(res.text)
-      const firstLiText = $('li').first().text()
-      expect(firstLiText).toBe('test user 2 (test2@user.nz)')
+      const formName = $('optgroup').attr('label')
+      expect(formName).toMatch('User')
+      done(err)
     })
-    .catch(err => expect(err).toBeNull())
 })
