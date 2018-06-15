@@ -42,17 +42,18 @@ router.post('/home', (req, res) => {
     })
 })
 
-router.post('/meatMath', (req, res) => {
+router.post('/', (req, res) => {
   const data = {
     user_id: req.body.id,
     date: req.body.date,
     meat_id: req.body.meat,
     amount: Number(req.body.amount)
   }
-  calcData(data)
+  const pollution = calcData(data)
+  console.log(pollution)
   db.insertEntry(data)
     .then(results => {
-      res.render('layouts/index')
+      res.render('layouts/index', pollution)
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)

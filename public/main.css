@@ -39,7 +39,7 @@ header img {
 
 form {
   width: 80%;
-  font-size: 1.2rem;
+  font-size: 2rem;
   text-transform: uppercase;
   margin: 0;
   display: inline-block;
@@ -92,9 +92,29 @@ button {
   padding: 5%;
 }
 
+.results p {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
 h2 {
   padding: 1rem;
-  font-size: 3rem;
+  font-size: 4rem;
+}
+
+.piggy {
+  background: url("/images/grass.jpg") no-repeat center center;
+}
+
+.piggy img {
+  width: 60%;
+  margin: 1rem;
+  margin-bottom: 2rem;
+  transition: transform 2s;
+ }
+
+ .piggy img:hover {
+  transform: rotate(1080deg) !important;
 }
 
 
