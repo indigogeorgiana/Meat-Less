@@ -6,7 +6,18 @@ const fn = require('../functions/math')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  res.render('layouts/index')
+  Promise.all([
+    db.getUsers(),
+    db.getMeats()
+  ])
+    .then(results => {
+      const userMeat = {
+        users: results[0],
+        meats: results[1]
+      }
+      res.render('layouts/index', userMeat)
+    }
+    )
 })
 
 router.get('/history', (req, res) => {
