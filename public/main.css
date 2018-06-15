@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid transparent;
+  border: 0.5px solid red;
 }
 
 html, body {
@@ -28,6 +28,7 @@ header {
 
 header img {
   width: 80%;
+
 }
 
 .maths {
@@ -68,6 +69,7 @@ form {
 .maths img:hover {
   transform: rotate(1080deg) !important;
 }
+
 
 .results {
   width: 100%;
