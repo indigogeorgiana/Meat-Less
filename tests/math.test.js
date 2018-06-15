@@ -3,20 +3,9 @@ const math = require('../functions/math')
 test('lambgas returns co2 figure per entry', () => {
   const data = {
     meat_id: 3,
-    amount: 100
+    amount: 1
   }
-  const expected = 3.92
-  const amount = data
-  const actual = math(amount)
-  expect(actual).toBe(expected)
-})
-
-test('lambaqua returns water figure per entry', () => {
-  const data = {
-    meat_id: 3,
-    amount: 100
-  }
-  const expected = 700
+  const expected = (0.0392, 7, 0.091)
   const amount = data
   const actual = math(amount)
   expect(actual).toBe(expected)
@@ -24,21 +13,10 @@ test('lambaqua returns water figure per entry', () => {
 
 test('beefgas returns co2 figure per entry', () => {
   const data = {
-    meat_id: 'beef',
-    amount: 100
+    meat_id: 1,
+    amount: 1
   }
-  const expected = 2.7
-  const amount = data
-  const actual = math(amount)
-  expect(actual).toBe(expected)
-})
-
-test('beefaqua returns water figure per entry', () => {
-  const data = {
-    meat_id: 'beef',
-    amount: 100
-  }
-  const expected = 1540
+  const expected = (0.027, 15.4, 0.063)
   const amount = data
   const actual = math(amount)
   expect(actual).toBe(expected)
@@ -46,21 +24,10 @@ test('beefaqua returns water figure per entry', () => {
 
 test('porkgas returns co2 figure per entry', () => {
   const data = {
-    meat_id: 'pork',
-    amount: 100
+    meat_id: 2,
+    amount: 1
   }
-  const expected = 1.21
-  const amount = data
-  const actual = math(amount)
-  expect(actual).toBe(expected)
-})
-
-test('porkaqua returns water figure per entry', () => {
-  const data = {
-    meat_id: 'port',
-    amount: 100
-  }
-  const expected = 600
+  const expected = (0.0121, 6, 0.031)
   const amount = data
   const actual = math(amount)
   expect(actual).toBe(expected)
@@ -68,21 +35,10 @@ test('porkaqua returns water figure per entry', () => {
 
 test('poultrygas returns co2 figure per entry', () => {
   const data = {
-    meat_id: 'poultry',
-    amount: 100
+    meat_id: 5,
+    amount: 1
   }
-  const expected = 0.69
-  const amount = data
-  const actual = math(amount)
-  expect(actual).toBe(expected)
-})
-
-test('poultryaqua returns water figure per entry', () => {
-  const data = {
-    meat_id: 'poultry',
-    amount: 100
-  }
-  const expected = 430
+  const expected = (0.0069, 4.3, 0.016)
   const amount = data
   const actual = math(amount)
   expect(actual).toBe(expected)
@@ -90,21 +46,10 @@ test('poultryaqua returns water figure per entry', () => {
 
 test('goatgas returns co2 figure per entry', () => {
   const data = {
-    meat_id: 'goat',
-    amount: 100
+    meat_id: 4,
+    amount: 1
   }
-  const expected = 0.69
-  const amount = data
-  const actual = math(amount)
-  expect(actual).toBe(expected)
-})
-
-test('goataqua returns water figure per entry', () => {
-  const data = {
-    meat_id: 'goat',
-    amount: 100
-  }
-  const expected = 430
+  const expected = (0.0069, 4.3, 0.016)
   const amount = data
   const actual = math(amount)
   expect(actual).toBe(expected)
