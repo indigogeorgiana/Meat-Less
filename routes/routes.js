@@ -35,7 +35,7 @@ router.get('/history/:id', (req, res) => {
 router.post('/home', (req, res) => {
   db.getUsers()
     .then(results => {
-      res.render('./partial/home', results)
+      res.render('partials/home', results)
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
