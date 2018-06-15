@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid red;
+  border: 0.5px solid transparent;
 }
 
 html, body {
@@ -16,14 +16,18 @@ a {
   text-decoration: none;
 }
 
+
+
 header {
-  max-width: 100%;
+  width: 80%;
   background: white;
   padding: 2rem;
+  height: auto;
+  overflow: hidden;
 }
 
 header img {
-  max-width: 100%;
+  width: 80%;
 }
 
 .maths {
@@ -57,7 +61,8 @@ form {
 .maths img {
   width: 40%;
   margin: 1rem;
-  transition         : transform 2s;
+  margin-bottom: 2rem;
+  transition: transform 2s;
 }
 
 .maths img:hover {
@@ -66,17 +71,23 @@ form {
 
 .results {
   width: 100%;
-  background: 
-}
-
-footer {
-  width: 100%;
   background: black;
   color: white;
 }
 
+.results img {
+  width: 60%;
+  padding: 5%;
+}
+
+footer {
+  width: 100%;
+  background: white;
+  color: black;
+}
+
 h5 {
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 /* Index page */
