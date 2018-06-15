@@ -6,7 +6,8 @@ module.exports = {
   getUser: getUser,
   getUsers: getUsers,
   insertEntry: insertEntry,
-  historyTotal: historyTotal
+  historyTotal: historyTotal,
+  resultCol: resultCol
 }
 
 function getUsers (testConn) {
@@ -39,4 +40,12 @@ function historyTotal (data, testConn) {
     })
     .sum('amount as result')
     .first()
+}
+
+function resultCol (id, testConn) {
+  const conn = testConn || connection
+  return conn('entries as e')
+    .join('meats as m', 'm.id', 'e.meat_id')
+    .where('e.user_id', id)
+    .select('m.type as meat', 'e.date as date', 'e.amount as amount')
 }
