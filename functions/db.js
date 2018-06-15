@@ -7,12 +7,18 @@ module.exports = {
   getUsers: getUsers,
   insertEntry: insertEntry,
   historyTotal: historyTotal,
-  resultCol: resultCol
+  resultCol: resultCol,
+  getMeats: getMeats
 }
 
 function getUsers (testConn) {
   const conn = testConn || connection
   return conn('users').select()
+}
+
+function getMeats (testConn) {
+  const conn = testConn || connection
+  return conn('meats').select()
 }
 
 function getUser (id, testConn) {

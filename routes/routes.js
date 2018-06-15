@@ -6,7 +6,18 @@ const fn = require('../functions/math')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  res.render('./layouts/index')
+  Promise.all([
+    db.getUsers(),
+    db.getMeats()
+  ])
+    .then(results => {
+      const userMeat = {
+        users: results[0],
+        meats: results[1]
+      }
+      res.render('layouts/index', userMeat)
+    }
+    )
 })
 
 router.get('/history', (req, res) => {
@@ -25,20 +36,20 @@ router.post('/home', (req, res) => {
 
 router.post('/meatMath', (req, res) => {
   const data = {
-    user_id: req.body.user,
+    user_id: req.body.id,
     date: req.body.date,
     meat_id: req.body.meat,
     amount: Number(req.body.amount)
   }
-  const test = fn.calcData(data)
+  const test = fn(data.amount)
   console.log(test)
-  // db.insertEntry(data)
-  // .then(results => {
-  res.render('./layouts/index')
-  // })
-  // .catch(err => {
-  //   res.status(500).send('DATABASE ERROR: ' + err.message)
-  // })
+  db.insertEntry(data)
+    .then(results => {
+      res.render('layouts/index')
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
 })
 
 // router.get('/', (req, res) => {
