@@ -9,14 +9,10 @@ html, body {
   text-align: center;
 }
 
-
-
 a {
 	color: black;
   text-decoration: none;
 }
-
-
 
 header {
   width: 80%;
@@ -31,12 +27,13 @@ header img {
 
 }
 
+/* maths */
+
 .maths {
   background-color: green;
   color: black;
   font-size: 1rem;
 }
-
 
 form {
   width: 80%;
@@ -47,7 +44,6 @@ form {
   border-radius: 4px;
   box-sizing: border-box;
 }
-
 
 .user {
   width: 100%;
@@ -70,6 +66,8 @@ form {
   transform: rotate(1080deg) !important;
 }
 
+
+/* Results */
 
 .results {
   width: 100%;
