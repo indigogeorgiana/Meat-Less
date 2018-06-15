@@ -60,3 +60,14 @@ test('historTotal calculates the total savings of an user', () => {
     })
     .catch(err => expect(err).toBeNull())
 })
+
+test('resultCol returns table with meat, date, amount', () => {
+  const expected = 2
+  const id = 1
+  return db.resultCol(id, testDb)
+    .then(result => {
+      const actual = result.length
+      expect(actual).toBe(expected)
+    })
+    .catch(err => expect(err).toBeNull())
+})

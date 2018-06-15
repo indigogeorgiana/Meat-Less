@@ -1,7 +1,7 @@
 const request = require('supertest')
 const cheerio = require('cheerio')
 
-jest.mock('../db', () => ({
+jest.mock('../functions/db', () => ({
   getUser: (id) => Promise.resolve(
     {id: id, name: 'test user', email: 'test@user.nz'}
   ),
@@ -13,14 +13,14 @@ jest.mock('../db', () => ({
 
 const server = require('../server')
 
-test('GET /', () => {
-  return request(server)
+test('GET /', done => {
+  request(server)
     .get('/')
     .expect(200)
-    .then((res) => {
+    .end((err, res) => {
       const $ = cheerio.load(res.text)
-      const firstLiText = $('li').first().text()
-      expect(firstLiText).toBe('test user 2 (test2@user.nz)')
+      const formName = $('optgroup').attr('label')
+      expect(formName).toMatch('User')
+      done(err)
     })
-    .catch(err => expect(err).toBeNull())
 })
