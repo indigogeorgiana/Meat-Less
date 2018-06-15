@@ -44,11 +44,7 @@ function historyTotal (data, testConn) {
     .select('e.amount as amount', 'e.date as date', 'm.type as meat')
     .where({
       'user_id': data.user_id
-      // 'meat_id': data.meat_id
     })
-    
-    // .sum('amount as result')
-    // .first()
 }
 
 function resultCol (id, testConn) {

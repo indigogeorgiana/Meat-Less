@@ -27,7 +27,6 @@ router.get('/history/:id', (req, res) => {
   }
   db.historyTotal(data)
     .then(result => {
-      console.log(result)
       res.render('layouts/history', {result})
     })
 })
@@ -50,7 +49,6 @@ router.post('/', (req, res) => {
     amount: Number(req.body.amount)
   }
   const pollution = calcData(data)
-  console.log(pollution)
   db.insertEntry(data)
     .then(results => {
       res.render('layouts/index', pollution)
@@ -59,15 +57,5 @@ router.post('/', (req, res) => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 })
-
-// router.get('/', (req, res) => {
-//   db.getUsers()
-//     .then(results => {
-//       res.render('/partials/index', results)
-//     })
-//     .catch(err => {
-//       res.status(500).send('DATABASE ERROR: ' + err.message)
-//     })
-// })
 
 module.exports = router
