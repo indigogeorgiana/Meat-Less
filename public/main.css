@@ -28,6 +28,7 @@ header img {
   padding: 2rem 0;
 }
 
+
 /* maths */
 
 .maths {
@@ -51,7 +52,6 @@ form {
   border-radius: 3px;
 }
 
-
 .maths img {
   width: 40%;
   margin: 1rem;
@@ -65,6 +65,7 @@ form {
 
 .maths p {
   margin-bottom: 0.3rem;
+  font-weight: bold;
 }
 
 button {
@@ -91,6 +92,14 @@ button {
   padding: 5%;
 }
 
+h2 {
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+
+/* Footer */
+
 footer {
   width: 100%;
   background: white;
@@ -100,8 +109,6 @@ footer {
 h5 {
   font-size: 1rem;
 }
-
-/* Index page */
 
 
 
