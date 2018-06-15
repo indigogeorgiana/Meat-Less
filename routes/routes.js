@@ -22,10 +22,13 @@ router.get('/', (req, res) => {
 
 router.get('/history/:id', (req, res) => {
   const id = req.params.id
-  db.historyTotal(id)
+  const data = {
+    user_id: id
+  }
+  db.historyTotal(data)
     .then(result => {
       console.log(result)
-      res.render('partials/history-table', result)
+      res.render('layouts/history', {result})
     })
 })
 

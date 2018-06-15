@@ -39,11 +39,14 @@ function insertEntry (data, testConn) {
 
 function historyTotal (data, testConn) {
   const conn = testConn || connection
-  return conn('entries')
+  return conn('entries as e')
+    .join('meats as m', 'm.id', 'e.meat_id')
+    .select('e.amount as amount', 'e.date as date', 'm.type as meat')
     .where({
-      'user_id': data.user_id,
-      'meat_id': data.meat_id
+      'user_id': data.user_id
+      // 'meat_id': data.meat_id
     })
+    
     // .sum('amount as result')
     // .first()
 }
