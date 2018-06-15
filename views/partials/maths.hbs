@@ -1,37 +1,32 @@
 
 <div class="maths"> 
   
-  <div class="users">
-    <select class="user" name="id">User</a>
-    {{#each users}}
-      <option name="user" value="{{id}}">{{name}}</option>
-    {{/each}}
-    </select>
-  </div>
-
-  <div class="meat-form"></div>
 
     <form method="post" action="/meatMath">
 
-      <select class="meat-type" name="meat">Meat</a>
+      <select class="user" name="id">
+        User:
+      {{#each users}}
+        <option name="user" value="{{id}}">{{name}}</option>
+      {{/each}}
+      </select>
+
+      <select class="meat-type" name="meat">
+        Meat:
       {{#each meats}}
           <option name="meat" value="{{id}}">{{type}}</option>
       {{/each}}
       </select>
-  </form>
- </div>
 
-      <div class="qtybox">
-        Quantity: <input placeholder="grams" class="qty" type="text" name="amount"></br>
-        Date: <input placeholder="15/06/2018"class="date" type="text" name="date"></br>
-        <button class="subBtn" type="submit">Submit</button></br>
-      </div>
+      Quantity: 
+      <input placeholder="grams" class="qty" type="text" name="amount"></br>
+      Date: 
+      <input placeholder="15/06/2018"class="date" type="text" name="date"></br>
+      <button class="subBtn" type="submit">Submit</button></br>
 
     </form>
 
     <img src="/images/cowface.png " alt="cow face">  
-
-  </div>
 
 </div>  
   
