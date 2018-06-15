@@ -2,12 +2,10 @@
 <div class="maths"> 
   
   <div class="users">
-    <select class="user" name="id">
-      <optgroup label="User">
-        <option name="1">Bron</option>
-        <option name="3"> Indi</option>
-        <option name="2">Sam </option>
-      </optgroup>
+    <select class="user" name="id">User</a>
+    {{#each users}}
+      <option name="user" value="{{id}}">{{name}}</option>
+    {{/each}}
     </select>
   </div>
 
@@ -16,10 +14,9 @@
     <form method="post" action="/meatMath">
 
       <select class="meat-type" name="meat">Meat</a>
-        <option name="beef">Beef</option>
-        <option name="lamb">Lamb </option>
-        <option name="pork">Pork </option>
-        <option name="chicken">Chicken </option>
+      {{#each meats}}
+          <option name="meat" value="{{id}}">{{type}}</option>
+      {{/each}}
       </select>
 
 
