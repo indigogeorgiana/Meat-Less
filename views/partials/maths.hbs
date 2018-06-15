@@ -1,27 +1,25 @@
 
 <div class="maths"> 
   
+  <div class="users">
+    <select class="user" name="id">User</a>
+    {{#each users}}
+      <option name="user" value="{{id}}">{{name}}</option>
+    {{/each}}
+    </select>
+  </div>
+
   <div class="meat-form"></div>
 
     <form method="post" action="/meatMath">
-      User:
-      <select class="user" name="id">
-        
-          <option placeholder="User" name=""></option>
-          <option name="1">Bron</option>
-          <option name="3"> Indi</option>
-          <option name="2">Sam </option>
-      
-      </select><br>
-    
-      Meat Type:
-      <select class="meat-type" name="meat">
-        <option name="beef">Beef</option><br>
-        <option name="lamb">Lamb </option>
-        <option name="pork">Pork </option>
-        <option name="chicken">Chicken </option>
-      </select>
 
+      <select class="meat-type" name="meat">Meat</a>
+      {{#each meats}}
+          <option name="meat" value="{{id}}">{{type}}</option>
+      {{/each}}
+      </select>
+  </form>
+ </div>
 
       <div class="qtybox">
         Quantity: <input placeholder="grams" class="qty" type="text" name="amount"></br>
