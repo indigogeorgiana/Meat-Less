@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0.5px solid red;
+  border: 0.5px solid transparent;
 }
 
 html, body {
@@ -15,45 +15,42 @@ a {
 }
 
 header {
-  width: 80%;
+  text-align: center;
+  width: 100%;
   background: white;
-  padding: 2rem;
-  height: auto;
-  overflow: hidden;
+  display: inline-block;
+  margin: auto;
 }
 
 header img {
-  width: 80%;
-
+  width: 100%;
+  margin: auto;
+  padding: 2rem 0;
 }
 
 /* maths */
 
 .maths {
   background-color: green;
-  color: black;
+  color: white;
   font-size: 1rem;
 }
 
 form {
   width: 80%;
-  font-size: 1rem;
-  padding: 12px 20px;
-  margin: 8px 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 0;
   display: inline-block;
-  border-radius: 4px;
   box-sizing: border-box;
 }
 
-.user {
+.user, .meat-type, input {
   width: 100%;
-  font-size: 1rem;
-  padding: 12px 12px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  height: 2rem;
+  border-radius: 3px;
 }
+
 
 .maths img {
   width: 40%;
@@ -64,6 +61,20 @@ form {
 
 .maths img:hover {
   transform: rotate(1080deg) !important;
+}
+
+.maths p {
+  margin-bottom: 0.3rem;
+}
+
+button {
+  background-color: red;
+  color: white;
+  width: 30%;
+  height: 2rem;
+  margin: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 
