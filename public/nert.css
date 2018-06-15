@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  border: 0.5px solid transparent;
+}
+
+html, body {
+  max-width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+a {
+	color: black;
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  background: white;
+  display: inline-block;
+  margin: auto;
+}
+
+header img {
+  width: 100%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+
+/* maths */
+
+.maths {
+  background-color: green;
+  color: white;
+  font-size: 1rem;
+}
+
+form {
+  width: 80%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.user, .meat-type, input {
+  width: 100%;
+  height: 2rem;
+  border-radius: 3px;
+}
+
+.maths img {
+  width: 40%;
+  margin: 1rem;
+  margin-bottom: 2rem;
+  transition: transform 2s;
+}
+
+.maths img:hover {
+  transform: rotate(1080deg) !important;
+}
+
+.maths p {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+button {
+  background-color: red;
+  color: white;
+  width: 30%;
+  height: 2rem;
+  margin: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+/* Results */
+
+.results {
+  width: 100%;
+  background: black;
+  color: white;
+}
+
+.results img {
+  width: 60%;
+  padding: 5%;
+}
+
+.results p {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  padding: 1rem;
+  font-size: 4rem;
+}
+
+.piggy {
+  background: url("/images/grass.jpg") no-repeat center center;
+}
+
+.piggy img {
+  width: 60%;
+  margin: 1rem;
+  margin-bottom: 2rem;
+  transition: transform 2s;
+ }
+
+ .piggy img:hover {
+  transform: rotate(1080deg) !important;
+}
+
+
+/* Footer */
+
+footer {
+  width: 100%;
+  background: white;
+  color: black;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+
+
+/* User page */
+
+
