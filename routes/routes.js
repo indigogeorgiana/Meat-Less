@@ -1,7 +1,7 @@
 const express = require('express')
 
 const db = require('../functions/db')
-const fn = require('../functions/math')
+const calcData = require('../functions/math')
 
 const router = express.Router()
 
@@ -41,8 +41,7 @@ router.post('/meatMath', (req, res) => {
     meat_id: req.body.meat,
     amount: Number(req.body.amount)
   }
-  const test = fn(data.amount)
-  console.log(test)
+  calcData(data)
   db.insertEntry(data)
     .then(results => {
       res.render('layouts/index')
