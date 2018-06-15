@@ -38,11 +38,3 @@ function calcData (data) {
     return (h2o, co2, miles)
   }
 }
-
-// function lambCarbon (amount) {
-//   return amount * 0.0392
-// }
-
-// function lambWater (amount) {
-//   return amount * 7
-// }
