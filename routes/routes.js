@@ -21,13 +21,13 @@ router.get('/', (req, res) => {
 })
 
 router.get('/history', (req, res) => {
-  res.render('partials/history')
+  res.render('./partials/history')
 })
 
 router.post('/home', (req, res) => {
   db.getUsers()
     .then(results => {
-      res.render('partial/home', results)
+      res.render('./partial/home', results)
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
@@ -41,7 +41,7 @@ router.post('/meatMath', (req, res) => {
     meat_id: req.body.meat,
     amount: Number(req.body.amount)
   }
-  const test = fn.calcData(data.amount)
+  const test = fn(data.amount)
   console.log(test)
   db.insertEntry(data)
     .then(results => {
