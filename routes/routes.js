@@ -9,14 +9,19 @@ router.get('/', (req, res) => {
   res.render('layouts/index')
 })
 
-router.get('/history', (req, res) => {
-  res.render('partials/history')
+router.get('/history/:id', (req, res) => {
+  const id = req.params.id
+  db.historyTotal(id)
+    .then(result => {
+      console.log(result)
+      res.render('partials/history-table', result)
+    })
 })
 
 router.post('/home', (req, res) => {
   db.getUsers()
     .then(results => {
-      res.render('partial/home', results)
+      res.render('partials/home', results)
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
